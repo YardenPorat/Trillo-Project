@@ -3,28 +3,67 @@
 ///////////////
 .logo{
     height: 3.25rem;
+    margin-left: 3rem;
 }
 ///////////////
 /* SearchBar */
 ///////////////
 .search{
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &__input{
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        padding: .7rem 2rem;
+        background-color: var(--color-gray-light-2);
+        border: none;
+        border-radius: 20rem;
+        width: 80%;
+        margin-right: -3.5rem;
+        &:focus{
+            outline: none;
+            width: 100%;
+            transition: all .4s;
+        background-color: var(--color-gray-light-3);
 
+        }
+        transition: all .4s;
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--color-gray-light-4);
+        }
+    }
+    &__input:focus + &__button{
+        background-color: var(--color-gray-light-3);
     }
     &__button{
-
+        border: none;
+        background-color: var(--color-gray-light-2);
+        &:focus{
+            outline: none;
+        }
+        &:active{
+            transform: translateY(.2rem);
+        }
     }
     &__icon{
         height: 2rem;
         width: 2rem;
+        //Set color to SVG
+        fill: var(--color-gray-dark-3)
     }
 }
 ///////////////
 /* UserNav */
 ///////////////
 .user-nav{
+    display: flex;
+    justify-content: space-between;
     &__icon-box{
-
+        
     }
     &__icon{
         height: 2.25rem;
