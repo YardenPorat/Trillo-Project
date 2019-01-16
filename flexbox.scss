@@ -1,0 +1,85 @@
+  /*
+
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+    --------------------------------|-----------------------------> Main Axis
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+                                    
+                                Cross axis
+     */
+ .flexbox{
+    &-container{
+        /*  
+            Set what type of flexbox container it will be 
+            row | row-reverse | colum | colum-reverse 
+        */
+            flex-direction: row;
+        /* 
+            Set if the items should wrap the container or not
+            nowrap | wrap | wrap-reverse
+        */ 
+            flex-wrap: nowrap;
+        /*  
+            Align content in the Main Axis
+            flex-start | flex-end | center | space-between | space-around |
+            space-evenly 
+        */
+            justify-content: flex-start;
+        /*  
+            Align content in the Cross Axis  
+            stretch | flex-start | flex-end | center | baseline 
+        */
+            align-items: stretch;
+        /* Align to the text  / */
+            align-items: baseline;
+        /* 
+            Align the rows that flex-wrap creates
+            stretch | flex-start | flex-end | center |
+            space-between | space-around
+        */          
+            align-content: stretch
+    }
+    &-item{
+        /* 
+            Override container alignment
+            auto | stretch | flex-start | flex-end | center |
+            baseline
+        */ 
+            align-self: auto;
+        /*  
+            Set the order of the items
+            Any number, it's relative to others order existing 
+            <Integer> 
+        */
+            order: 0;
+        /*  
+            Say how much an item can grow according to the others  
+            <Integer>
+        */
+            flex-grow:1;
+        /* 
+            Say if an element can shrink or not  
+            <Integer> 
+        */
+            flex-shrink: 0; 
+        /*  
+            Set the base width/height of an element  
+            <length> 
+        */
+            flex-basis: 300px;
+        /*  Flex: Flex grow, flex shrink, flex-basis  */
+            flex: 0 1 300px;
+    }
+ }
+  
