@@ -1,19 +1,22 @@
 ///////////////
 /* LOGO */
+
 ///////////////
-.logo{
+.logo {
     height: 3.25rem;
     margin-left: 2rem;
 }
+
 ///////////////
 /* SearchBar */
+
 ///////////////
-.search{
+.search {
     flex: 0 0 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-    &__input{
+    &__input {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
@@ -23,67 +26,66 @@
         border-radius: 20rem;
         width: 80%;
         margin-right: -3.5rem;
-        &:focus{
+        &:focus {
             outline: none;
             width: 100%;
             transition: all .4s;
-        background-color: var(--color-gray-light-3);
-
+            background-color: var(--color-gray-light-3);
         }
         transition: all .4s;
-        &::-webkit-input-placeholder{
+        &::-webkit-input-placeholder {
             font-weight: 100;
             color: var(--color-gray-light-4);
         }
     }
-    &__input:focus + &__button{
+    &__input:focus+&__button {
         background-color: var(--color-gray-light-3);
     }
-    &__button{
+    &__button {
         border: none;
         background-color: var(--color-gray-light-2);
-        &:focus{
+        &:focus {
             outline: none;
         }
-        &:active{
+        &:active {
             transform: translateY(.2rem);
         }
     }
-    &__icon{
+    &__icon {
         height: 2rem;
-        width: 2rem;
-        //Set color to SVG
+        width: 2rem; //Set color to SVG
         fill: var(--color-gray-dark-3);
     }
 }
+
 ///////////////
 /* UserNav */
+
 ///////////////
-.user-nav{
+.user-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
-
-    & > *{
+    &>* {
         padding: 0 2rem;
         cursor: pointer;
         height: 100%;
         display: flex;
         align-items: center;
     }
-    & > *:hover{
-        background-color:  var(--color-gray-light-2);
+    &>*:hover {
+        background-color: var(--color-gray-light-2);
     }
-    &__icon-box{
+    &__icon-box {
         position: relative;
     }
-    &__icon{
+    &__icon {
         height: 2.25rem;
         width: 2.25rem;
         fill: var(--color-gray-dark-2);
     }
-    &__notification{
+    &__notification {
         font-size: .8rem;
         height: 1.75rem;
         width: 1.75rem;
@@ -97,35 +99,112 @@
         justify-content: center;
         align-items: center;
     }
-    &__user-photo{
+    &__user-photo {
         height: 3.75rem;
         border-radius: 50%;
         margin-right: 1rem;
     }
 }
+
 ///////////////
 /* UserNav */
-///////////////
-.side-nav{
-    display: flex;
-    flex-direction: column;
-    &__item{
-    }
-    &__link{
 
+///////////////
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none; // margin-top: 3.5rem;
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
     }
-    &__icon{
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary); // transform-origin: bottom;
+        transform: scaleY(0);
+        transition: transform .2s, width cubic-bezier(1, 0, 0, 1) .4s .2s, background-color .1s;
+    }
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }
+    &__link:link,
+    &__link:visited {
+        color: var(--color-gray-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+    &__icon {
         width: 1.75rem;
         height: 1.75rem;
-
+        margin-right: 2rem; //color of the parent
+        fill: currentColor;
     }
 }
+
 ///////////////
 /* LegalText */
+
 ///////////////
-.legal{
+.legal {
     font-size: 1.2rem;
     text-align: center;
     padding: 2.5rem;
     color: var(--color-gray-light-4);
+}
+
+///////////////
+/* Over View */
+
+///////////////
+.gallery {
+    display: flex;
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+///////////////
+/* Hotel Over View */
+
+///////////////
+.overview {
+    display: flex;
+    align-items: center;
+    &__heading {
+
+    }
+    &__stars {
+        margin-right: auto;     
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+    &__location{
+    }
+    &__rating {
+        &--average {}
+        &--count {}
+    }
 }
