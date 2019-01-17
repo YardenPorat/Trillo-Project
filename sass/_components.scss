@@ -112,11 +112,20 @@
 ///////////////
 .side-nav {
     font-size: 1.4rem;
-    list-style: none; // margin-top: 3.5rem;
+    list-style: none; 
+    margin-top: 3.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
     &__item {
         position: relative;
         &:not(:last-child) {
             margin-bottom: .5rem;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+            margin-bottom: 0;
         }
     }
     &__item::before {
@@ -149,6 +158,10 @@
         align-items: center;
         position: relative;
         z-index: 10;
+        @media only screen and (max-width: $bp-medium) {
+           justify-content: center;
+           padding: 2rem 3rem;
+        }
     }
     &__icon {
         width: 1.75rem;
@@ -167,6 +180,9 @@
     text-align: center;
     padding: 2.5rem;
     color: var(--color-gray-light-4);
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 ///////////////
@@ -332,6 +348,9 @@
     &__count {
         margin-right: auto;
     }
+    &__friends{
+        display: flex;
+    }
     &__photo {
         height: 4rem;
         width: 4rem;
@@ -339,7 +358,7 @@
         border: 3px solid white;
         box-sizing: content-box;
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -355,6 +374,10 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
     &__text {
         margin-bottom: 2rem;
         z-index: 10;
@@ -408,6 +431,9 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
     &__book-now {
         text-transform: uppercase;
         font-weight: 300;
