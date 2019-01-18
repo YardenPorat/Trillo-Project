@@ -26,29 +26,69 @@
             </form>
             <nav class="user-nav">
                 <div class="user-nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-bookmark"></use>
-                    </svg>
-                    <span class="user-nav__notification">7</span>
+                    <div class="user-nav__container">
+                        <svg class="user-nav__icon" id="bookmark">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification">7</span>
+                    </div>
+
                 </div>
-                <div class="user-nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-chat"></use>
-                    </svg>
-                    <span class="user-nav__notification">13</span>
+                <div class="user-nav__icon-box" id="chat">
+                    <div class="user-nav__container">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification">13</span>
+                    </div>
+
+                    <div class="user-menu ">
+                        <ul class="user-menu__list">
+                            <li class="user-menu__list__item--chat">
+                                <div class="chat__user">
+                                    <img src="img/user-1.jpg" alt="User 1" class="chat__photo">
+                                    <div class="chat__user-box">
+                                        <p class="chat__user-name">Otavio</p>
+                                        <p class="chat__user-date">Tava vendo o seu site, gostei demais...</p>
+                                    </div>
+                                    <div class="chat__rating">7</div>
+                                </div>
+                            </li>
+                            <li class="user-menu__list__item--chat">
+                                <div class="chat__user">
+                                    <img src="img/user-2.jpg" alt="User 3" class="chat__photo">
+                                    <div class="chat__user-box">
+                                        <p class="chat__user-name">Jessica</p>
+                                        <p class="chat__user-date">Acho que podemos fazer alg...</p>
+                                    </div>
+                                    <div class="chat__rating">9</div>
+                                </div>
+                            </li>
+                            <li class="user-menu__list__item--chat">
+                                <div class="chat__user">
+                                    <img src="img/user-3.jpg" alt="User 2" class="chat__photo">
+                                    <div class="chat__user-box">
+                                        <p class="chat__user-name">Marcelo</p>
+                                        <p class="chat__user-date">Adorei seu site, me ensi...</p>
+                                    </div>
+                                    <div class="chat__rating">2</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="user-nav__user">
                     <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
                     <span class="user-nav__user-name">Jonas</span>
                     <div class="user-menu">
-                        <ul class="user-menu__list"> 
+                        <ul class="user-menu__list">
                             <li class="user-menu__list__item">Profile</li>
                             <li class="user-menu__list__item">Settings</li>
                             <li class="user-menu__list__item">Log-out</li>
                         </ul>
                     </div>
                 </div>
-                
             </nav>
         </header>
         <div class="content">
@@ -173,7 +213,7 @@
                                     <p class="review__user-name">Nick Smith</p>
                                     <p class="review__user-date">Feb 23rd, 2017</p>
                                 </div>
-                                <div class="review__rating">7.8</div>                             
+                                <div class="review__rating">7.8</div>
                             </figcaption>
                         </figure>
                         <figure class="review">
@@ -187,10 +227,10 @@
                                     <p class="review__user-name">Mary Tohmas</p>
                                     <p class="review__user-date">Sept 13th, 2017</p>
                                 </div>
-                                <div class="review__rating">9.3</div>                             
+                                <div class="review__rating">9.3</div>
                             </figcaption>
                         </figure>
-                        <button class="btn-inline" >Show all <span>&rarr;</span></button>
+                        <button class="btn-inline">Show all <span>&rarr;</span></button>
                     </div>
                 </div>
                 <div class="cta">
