@@ -17,7 +17,23 @@
         <header class="header">
             <img src="img/logo.png" alt="trillo logo" class="logo">
             <form action="#" class="search">
-                <input type="text" class="search__input" name="" id="" placeholder="Search Hotels">
+                <input type="text" class="search__input" list="names" name="" id="" placeholder="Search Hotels"
+                    autocomplete="username">
+
+                <datalist id="names">
+                    <option value="Otavio">
+                    <option value="Jessica">
+                    <option value="Mateus">
+                    <option value="Gustavo">
+                    <option value="Lucas">
+                    <option value="Jorge">
+                    <option value="Manfred">
+                    <option value="Jair">
+                    <option value="Alfredo">
+                    <option value="Regis">
+                    <option value="Renan">
+                    <option value="Fernando">
+                </datalist>
                 <button class="search__button">
                     <svg class="search__icon">
                         <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>

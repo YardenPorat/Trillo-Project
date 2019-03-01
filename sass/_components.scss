@@ -48,7 +48,7 @@
     }
     &__button {
         border: none;
-        background-color: var(--color-gray-light-2);
+        // background-color: var(--color-gray-light-2);
         &:focus {
             outline: none;
         }
@@ -59,7 +59,7 @@
     &__icon {
         height: 2rem;
         width: 2rem; //Set color to SVG
-        fill: var(--color-gray-dark-3);
+        fill: var(--color-primary-dark);
     }
 }
 
