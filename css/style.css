@@ -60,17 +60,17 @@ body {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     background-color: var(--color-gray-light-2);
     border: none;
     border-radius: 20rem;
     width: 80%;
     margin-right: -3.5rem;
-    transition: all .4s; }
+    transition: all 0.4s; }
     .search__input:focus {
       outline: none;
       width: 100%;
-      transition: all .4s;
+      transition: all 0.4s;
       background-color: var(--color-gray-light-3); }
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
@@ -78,8 +78,7 @@ body {
   .search__input:focus + .search__button {
     background-color: var(--color-gray-light-3); }
   .search__button {
-    border: none;
-    background-color: var(--color-gray-light-2); }
+    border: none; }
     .search__button:focus {
       outline: none; }
     .search__button:active {
@@ -87,7 +86,7 @@ body {
   .search__icon {
     height: 2rem;
     width: 2rem;
-    fill: var(--color-gray-dark-3); }
+    fill: var(--color-primary-dark); }
 
 /* UserNav */
 .side-nav {
@@ -101,7 +100,7 @@ body {
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
-      margin-bottom: .5rem; }
+      margin-bottom: 0.5rem; }
     @media only screen and (max-width: 56.25em) {
       .side-nav__item {
         flex: 1; }
@@ -138,7 +137,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .side-nav__link:link, .side-nav__link:visited {
         flex-direction: column;
-        padding: 1.5rem .5rem; } }
+        padding: 1.5rem 0.5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -147,7 +146,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .side-nav__icon {
         margin-right: 0;
-        margin-bottom: .7rem;
+        margin-bottom: 0.7rem;
         height: 1.5rem;
         width: 1.5rem; } }
 
@@ -164,9 +163,31 @@ body {
 /* Over View */
 .gallery {
   display: flex; }
+  .gallery__item {
+    position: relative; }
+    .gallery__item:hover > .gallery__photo__caption {
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      font-size: 6rem;
+      color: gainsboro;
+      opacity: 1;
+      visibility: visible;
+      height: auto; }
   .gallery__photo {
     width: 100%;
     display: block; }
+    .gallery__photo__caption {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 1rem;
+      padding: 0 1rem;
+      opacity: 0;
+      height: 0;
+      visibility: hidden;
+      position: absolute;
+      transition: transform 0.4s, top .4s, left .4s; }
 
 /* Hotel Over View */
 .overview {
@@ -191,7 +212,7 @@ body {
     height: 1.75rem;
     fill: var(--color-primary); }
   .overview__icon-location {
-    margin-right: .5rem; }
+    margin-right: 0.5rem; }
   .overview__location {
     font-size: 1.2rem;
     display: flex;
@@ -216,11 +237,11 @@ body {
         .overview__rating--average {
           font-size: 1.8rem; } }
     .overview__rating--count {
-      font-style: .8rem;
+      font-style: 0.8rem;
       text-transform: uppercase; }
       @media only screen and (max-width: 37.5em) {
         .overview__rating--count {
-          font-size: .5rem; } }
+          font-size: 0.5rem; } }
 
 /* Buttons */
 .btn-inline {
@@ -234,7 +255,7 @@ body {
   cursor: pointer; }
   .btn-inline span {
     margin-left: 3px;
-    transition: margin-left .2s; }
+    transition: margin-left 0.2s; }
   .btn-inline:hover {
     color: var(--color-gray-dark-1); }
     .btn-inline:hover span {
@@ -269,13 +290,13 @@ body {
   flex-wrap: wrap; }
   .list__item {
     flex: 0 0 50%;
-    margin-bottom: .7rem; }
+    margin-bottom: 0.7rem; }
   .list__item::before {
     content: "";
     display: inline-block;
     height: 1rem;
     width: 1rem;
-    margin-right: .7rem;
+    margin-right: 0.7rem;
     background-image: url("../img/chevron-thin-right.svg");
     background-size: cover; }
     @supports (mask-image: url("")) or (-webkit-mask-image: url("")) {
@@ -334,7 +355,7 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: .4rem; }
+    margin-bottom: 0.4rem; }
   .review__user-date {
     font-size: 1rem;
     color: var(--color-gray-dark-3); }
@@ -381,7 +402,7 @@ body {
   overflow: hidden;
   cursor: pointer; }
   .btn > * {
-    transition: all .2s;
+    transition: all 0.2s;
     height: 100%;
     width: 100%;
     display: inline-block; }
@@ -483,6 +504,11 @@ body {
 .hotel-view {
   background-color: #fff;
   flex: 1; }
+
+@keyframes captionEnter {
+  100% {
+    color: gainsboro;
+    transform: translateY(-500%); } }
 
 /* UserNav */
 .user-nav {

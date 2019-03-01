@@ -90,3 +90,9 @@
     background-color: #fff;
     flex: 1;
 }
+@keyframes captionEnter{
+    100%{
+        color: gainsboro;
+        transform: translateY(-500%);
+    }
+}
