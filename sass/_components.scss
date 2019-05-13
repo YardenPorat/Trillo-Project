@@ -170,7 +170,6 @@
       opacity: 1;
       visibility: visible;
       height: auto;
-    
     }
   }
   &__photo {
@@ -186,7 +185,7 @@
       height: 0;
       visibility: hidden;
       position: absolute;
-      transition: transform 0.4s, top .4s, left .4s;
+      transition: transform 0.4s, top 0.4s, left 0.4s;
     }
   }
 }
