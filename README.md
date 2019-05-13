@@ -29,6 +29,6 @@ Despite that I have made a few changes in the code, the role creation **is assig
 A Web developer with experience in `Angular`, `Sass`,`UX & UI` and `Back-end` development
 - Contact - othecos@gmail.com
 - Web Portofolio - https://othecos.com.br/
-- Linkedin - [![](https://media.licdn.com/dms/image/C4E12AQHh9fBjpzFo1A/article-inline_image-shrink_1000_1488/0?e=1552521600&v=beta&t=PgH46e9sTLKoJ-fuPphuLE_eUOZVN4Xodt8kQQyhmRE)](https://www.linkedin.com/in/otavio-henrique-pires-costa-354902126/)
+- Linkedin - https://www.linkedin.com/in/otavio-henrique-pires-costa/
 
 
